@@ -1,0 +1,62 @@
+.class Lorg/telegram/ui/Telehgram/SetPasswordActivity$8;
+.super Ljava/lang/Object;
+.source "SetPasswordActivity.java"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lorg/telegram/ui/Telehgram/SetPasswordActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lorg/telegram/ui/Telehgram/SetPasswordActivity;
+
+
+# direct methods
+.method constructor <init>(Lorg/telegram/ui/Telehgram/SetPasswordActivity;)V
+    .registers 2
+    .param p1, "this$0"    # Lorg/telegram/ui/Telehgram/SetPasswordActivity;
+
+    .prologue
+    .line 362
+    iput-object p1, p0, Lorg/telegram/ui/Telehgram/SetPasswordActivity$8;->this$0:Lorg/telegram/ui/Telehgram/SetPasswordActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onPreDraw()Z
+    .registers 2
+
+    .prologue
+    .line 365
+    iget-object v0, p0, Lorg/telegram/ui/Telehgram/SetPasswordActivity$8;->this$0:Lorg/telegram/ui/Telehgram/SetPasswordActivity;
+
+    # getter for: Lorg/telegram/ui/Telehgram/SetPasswordActivity;->listView:Landroid/widget/ListView;
+    invoke-static {v0}, Lorg/telegram/ui/Telehgram/SetPasswordActivity;->access$1000(Lorg/telegram/ui/Telehgram/SetPasswordActivity;)Landroid/widget/ListView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    .line 366
+    const/4 v0, 0x1
+
+    return v0
+.end method
